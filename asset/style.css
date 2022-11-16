@@ -1,0 +1,95 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #DADADA;
+}
+
+.grid-view {
+    max-width: 1200px;
+    margin: 100px auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.image {
+    width: 22%;
+    height: 200px;
+    margin: 8px;
+    align-content: flex-start;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.image:hover img {
+    transform: scale(1.2, 1.2);
+    cursor: pointer;
+}
+
+.show-view {
+    user-select: none;
+    width: 100%;
+    height: 100vh;
+    padding: 12px;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+}
+
+.hide {
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.show-view__top {
+    position: absolute;
+    right: 0;
+    padding: 10px;
+    color: white;
+    font-size: 40px;
+    margin-right: 12px;
+}
+
+.show-view__body {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.show-view__body .content {
+    width: 70%;
+    height: 70%;
+    background-color: red;
+}
+
+.show-view__body .control {
+    align-self: center;
+    color: white;
+    padding: 8px;
+    font-size: 55px;
+}
+
+.show-view__body .control.hide {
+    visibility: hidden;
+}
+
+.show-view__body .content img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
